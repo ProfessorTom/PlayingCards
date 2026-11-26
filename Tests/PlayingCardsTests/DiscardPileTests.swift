@@ -99,4 +99,35 @@ import Testing
             #expect(discardPile == expectedDiscardPile)
         }
     }
+    
+    struct peekTests {
+        @Test func peekWhenDiscardPileIsEmpty() {
+            let discardPile = DiscardPile()
+            #expect(discardPile.count == 0)
+            
+            let card = discardPile.peek()
+            #expect(card == nil)
+            #expect(discardPile.count == 0)
+        }
+        
+        @Test func peekWhenDiscardPileHasCards() {
+            var discardPile = DiscardPile()
+            #expect(discardPile.count == 0)
+            
+            let jackOfClubs = Card.standard(pip: .jack, suit: .clubs)
+            
+            let cards = [
+                Card.joker(.big),
+                Card.standard(pip: .five, suit: .diamonds),
+                jackOfClubs
+            ]
+            
+            for card in cards {
+                discardPile.push(card)
+            }
+            
+            let card = discardPile.peek()
+            #expect(card == jackOfClubs)
+        }
+    }
 }

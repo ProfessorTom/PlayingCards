@@ -22,6 +22,10 @@ public struct DiscardPile: Equatable, Hashable, Codable {
         return cards.popLast()
     }
     
+    public func peek() -> Card? {
+        return cards.last
+    }
+    
     /// Removes and returns all cards except the top one.
     public mutating func flush() -> [Card]? {
         guard cards.count > 1 else { return nil }
