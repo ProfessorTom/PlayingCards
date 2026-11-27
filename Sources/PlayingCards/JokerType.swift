@@ -6,6 +6,7 @@
 //
 
 
-public enum JokerType: Equatable, Hashable, Codable {
+public enum JokerType: Equatable, Hashable, Codable, Sendable {
     case big, little
 }
+

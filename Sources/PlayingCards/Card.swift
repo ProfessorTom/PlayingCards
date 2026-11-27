@@ -6,7 +6,7 @@
 //
 
 
-public enum Card: CustomStringConvertible, Equatable, Hashable, Codable {
+public enum Card: CustomStringConvertible, Equatable, Hashable, Codable, Sendable {
     case standard(pip: Pip, suit: Suit)
     case joker(JokerType)
     
@@ -37,3 +37,4 @@ public enum Card: CustomStringConvertible, Equatable, Hashable, Codable {
         }
     }
 }
+

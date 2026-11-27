@@ -6,7 +6,7 @@
 //
 
 
-public enum Suit: String, CaseIterable, CustomStringConvertible, Equatable, Hashable, Codable {
+public enum Suit: String, CaseIterable, CustomStringConvertible, Equatable, Hashable, Codable, Sendable {
     case hearts, diamonds, clubs, spades
     
     public var description: String {

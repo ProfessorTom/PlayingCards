@@ -6,7 +6,7 @@
 //
 
 
-public enum Pip: CaseIterable, CustomStringConvertible, Equatable, Hashable, Comparable, Codable {
+public enum Pip: CaseIterable, CustomStringConvertible, Equatable, Hashable, Comparable, Codable, Sendable {
     case two, three, four, five, six, seven, eight, nine, ten, jack, queen, king, ace
     
         // Returns the standard "high" value
@@ -48,3 +48,4 @@ public enum Pip: CaseIterable, CustomStringConvertible, Equatable, Hashable, Com
         }
     }
 }
+
